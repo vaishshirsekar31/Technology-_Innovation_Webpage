@@ -1,0 +1,318 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+/* Fixed Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa; /* Matches header background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd; /* Consistent with additional code */
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center; /* Center each link */
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+
+
+/* Circle Styling */
+.circle-large {
+    position: absolute;
+    top: 0;
+    left: -200px; /* Shift the circle further left */
+    width: 400px; /* Adjust size if necessary */
+    height: 400px;
+    background-color: #4497ef;
+    opacity: 0.1;
+    border-radius: 50%;
+    z-index: -1; /* Ensure it's behind all content */
+}
+
+/* Impact Section Styling */
+.impact-section {
+    padding-top: 100px; /* Spacing to avoid overlap with fixed header */
+    padding: 2rem 3rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    background-color: #ecf3fb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.cards-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.impact-card {
+    max-width: 330px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.impact-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Feedback Section Styling */
+.feedback-section {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feedback-section h2 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-section p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Form Styling */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.feedback-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #666;
+    z-index: 10;
+}
+
+/* Remove underline from "Reference" link */
+footer a#reference-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #f8f9fa;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem 2rem;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Center align nav links on mobile */
+    .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+    width: 100%;
+    padding: 0;
+    text-align: center; /* Center the text */
+    }
+
+    .nav-links a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center; /* Center each link */
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
+
+    .nav-links a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    }
+
+
+    footer {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    .milestone-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .milestone-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .milestone-item img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .milestone-text {
+        text-align: center;
+    }
+
+    /* Intro Section */
+.intro-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
+.intro-text {
+    padding-right: 0;
+    margin-bottom: 1rem;
+}
+
+.homepage-image {
+    max-width: 95%;
+}
+
+.impact-section {
+    padding: 1.5rem;
+}
+
+.feedback-section {
+    margin: 1.5rem;
+    padding: 1.5rem;
+}
+}
+
+
+

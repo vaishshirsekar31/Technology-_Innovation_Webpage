@@ -1,0 +1,259 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* Header and Navbar Styling */
+.header {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Circle Design */
+.circle-large {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 400px;
+    height: 400px;
+    background-color: #4497ef;
+    opacity: 0.1;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Main Content Styling */
+.page-trends {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Card Container Styling */
+.card-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.3rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+}
+
+.card-caption {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    color: #333;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #666;
+    z-index: 10;
+}
+
+/* Remove underline from "Reference" link */
+footer a#reference-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #f8f9fa;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem 2rem;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Center align nav links on mobile */
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+    width: 100%;
+    padding: 0;
+    text-align: center; /* Center the text */
+}
+
+.nav-links a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center; /* Center each link */
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+
+    footer {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .logo {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    .milestone-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .milestone-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .milestone-item img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .milestone-text {
+        text-align: center;
+    }
+
+    
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .card-image img {
+        height: auto;
+    }
+    
+    .small-circle-container {
+        position: relative;
+        bottom: 0;
+        right: -170px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+}
+
+

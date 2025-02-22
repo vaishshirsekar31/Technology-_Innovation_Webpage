@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact of Technology Innovation</title>
+    <link rel="stylesheet" href="assets/css/impact.css">
+</head>
+<body>
+    <!-- Circle Design -->
+    <div class="circle-container">
+        <div class="circle circle-large"></div>
+    </div>
+
+    <!-- Header with Fixed Position -->
+    <header class="header">
+        <div class="logo">Technology Innovation</div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="evolution.html">Evolution</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="trends.html">Trends</a></li>
+                <li><a href="impact.html" class="active">Impact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">☰</div>
+    </header>
+
+    <!-- Main Content for Impact of Technology Innovation -->
+    <main class="impact-section">
+        <h1>Impact of Technology Innovation on Society</h1>
+        <p>
+            Technological innovation has reshaped how we live, communicate, and interact with the world around us. From the rise of social media platforms to innovations in healthcare and education, technology has transformed everyday life in numerous ways.
+        </p>
+
+        <!-- Impact Categories with Images -->
+        <div class="cards-container">
+            <div class="impact-card">
+                <img src="assets/images/social.jpg" alt="Social Connectivity">
+                <h3>Social Connectivity</h3>
+                <p>With the advent of the internet and smartphones, social media platforms have revolutionized how people connect and communicate.</p>
+            </div>
+
+            <div class="impact-card">
+                <img src="assets/images/healthcare.jpg" alt="Healthcare Advancements">
+                <h3>Healthcare Advancements</h3>
+                <p>Technological innovations have improved healthcare systems, enabling telemedicine, wearable health devices, and precision medicine.</p>
+            </div>
+
+            <div class="impact-card">
+                <img src="assets/images/education.jpg" alt="Education">
+                <h3>Education</h3>
+                <p>Technology has revolutionized education through digital learning platforms, online courses, and virtual classrooms, increasing access to education globally.</p>
+            </div>
+        </div>
+
+        <!-- Feedback Form Section -->
+        <section class="feedback-section">
+            <h2>We'd Love Your Feedback</h2>
+            <p>Let us know how technology has impacted your life. Your feedback helps us understand the broader impact of technological innovations on society.</p>
+            
+            <form action="#" method="post" class="feedback-form" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="impact">How has technology impacted you?</label>
+                <select id="impact" name="impact" required>
+                    <option value="">Select an option</option>
+                    <option value="personal">Personal Life</option>
+                    <option value="education">Education</option>
+                    <option value="career">Career</option>
+                    <option value="health">Health</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Share your experience" required></textarea>
+
+                <button type="submit" class="submit-button">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+    <script src="assets/javascript/dropdownmenu.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>Vaishnavi Shirsekar</p>
+        <p><a href="references.html" id="reference-link">Reference</a></p>
+    </footer>
+
+    <!-- JavaScript for Validation -->
+    <script>
+    function validateForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const impact = document.getElementById("impact").value;
+        const comments = document.getElementById("comments").value;
+
+        if (!name || !email || !impact || !comments) {
+            alert("Please fill in all fields.");
+            return false;
+        }
+        return true;
+    }
+    </script>
+
+</body>
+</html>
